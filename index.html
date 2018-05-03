@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Everything about Project Mosaic"/>
+		<meta name="keywords" content="project mosaic, zalando, tech"/>
+		<meta name="author" content="Team Pathfinder"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1"/>
+		<title>Project Mosaic—Frontend Microservices</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png">
+		<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/images/favicon-194x194.png" sizes="194x194">
+		<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/images/manifest.json">
+		<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#ff6900">
+		<link rel="shortcut icon" href="/images/favicon.ico">
+		<meta name="msapplication-TileColor" content="#e66000">
+		<meta name="msapplication-TileImage" content="/images/mstile-144x144.png">
+		<meta name="msapplication-config" content="/images/browserconfig.xml">
+		<meta name="theme-color" content="#ff6900">
+	</head>
+	<body>
+		<img src="images/mosaic.jpg" alt="Project Mosaic illustration" class="illustration">
+		<div class="wrapper">
+			<div class="content-main">
+				<h1 class="content-title">Project Mosaic |<span class="content-subtitle"> Microservices for the Frontend</span></h1>
+				<p class="content-definition">
+					Mosaic is a set of services, libraries together with a specification that defines how its components interact with each other, to support a microservice style architecture for large scale websites.
+					While decomposing the backend into microservices is a widely adopted approach to achieve flexibility in development and operation, most frontend solutions are still running as a monolithic application.
+					Mosaic addresses this issue by using Fragments that are served by separate services and are composed together at runtime according to template definitions.
+					As a result, Fragments can be iterated on very rapidly, be more flexible in technology choices, and can better benefit from the extreme development pace of today's frontend technologies.
+				</p>
+			</div>
+
+			<div class="content-components">
+				<h2 class="content-references-title">Components</h2>
+				<div class="content-component">
+					<div class="content-component content-component-odd">
+						<img class="content-component-image" src="images/tailor.svg">
+						<h3 class="content-component-title">Tailor</h3>
+						<a class="content-component-link" target="_blank" href="https://github.com/zalando/tailor">
+							<!-- on mobile, it is more hacker-friendly to show the actual url -->
+							<span class="link-break">https://github.com</span><span class="link-break">/zalando</span><span class="link-break">/tailor</span>
+						</a>
+						<p class="content-component-text">
+							Tailor is a layout service that brings microservices to the frontend by composing a website out of various Fragments (such as Header, Product, and Footer). Tailor achieves impressive Time to First Byte, as it asynchronously fetches multiple fragments, assembles their response streams, and outputs the final response. Tailor is partially inspired by Facebook’s <a href="https://www.facebook.com/notes/facebook-engineering/bigpipe-pipelining-web-pages-for-high-performance/389414033919/">BigPipe</a>.
+						</p>
+					</div>
+				</div>
+				<div class="content-component">
+					<div class="content-component content-component-even">
+						<img class="content-component-image" src="images/skipper.jpg">
+						<h3 class="content-component-title">Skipper</h3>
+						<a class="content-component-link" target="_blank" href="https://github.com/zalando/skipper">
+							<!-- on mobile, it is more hacker-friendly to show the actual url -->
+							<span class="link-break">https://github.com</span><span class="link-break">/zalando</span><span class="link-break">/skipper</span>
+						</a>
+						<p class="content-component-text">
+							Skipper is an extendable HTTP router for service composition. It's built on top a reverse proxy with the ability to select routes based on predicates, and to modify requests and responses with filters. It can be useful for all teams who are trying to deploy a microservices architecture and want (or need) to decouple routing from service logic.
+					</div>
+				</div>
+				<div class="content-component">
+					<div class="content-component content-component-odd">
+						<img class="content-component-image" src="images/shaker.svg">
+						<h3 class="content-component-title">Shaker</h3>
+						<p class="content-component-text">
+							Shaker is a library and living showcase for UI components. It is used inside Zalando to provide a consistent user experience while developing Fragments in distributed and autonomous teams.</p>
+					</div>
+				</div>
+				<div class="content-component">
+					<div class="content-component content-component-even">
+						<img class="content-component-image" src="images/quilt.svg">
+						<h3 class="content-component-title">Quilt</h3>
+						<p class="content-component-text">
+							Quilt is the template storage used by Tailor. It integrates with Zalando's team structure and provides a REST API that allows multiple development teams to manage their templates.</p>
+					</div>
+				</div>
+				<div class="content-component">
+					<div class="content-component content-component-odd">
+						<img class="content-component-image" src="images/innkeeper.svg">
+						<h3 class="content-component-title">Innkeeper</h3>
+						<a class="content-component-link" target="_blank" href="https://github.com/zalando/innkeeper">
+							<!-- on mobile, it is more hacker-friendly to show the actual url -->
+							<span class="link-break">https://github.com</span><span class="link-break">/zalando</span><span class="link-break">/innkeeper</span>
+						</a>
+						<p class="content-component-text">
+							Innkeeper is a RESTful API that stores routes, so that they can be fetched by Skipper. Innkeeper can export the routes in the eskip format. As routes are divided by paths, it allows multiple teams to manage their individual paths. It is developed in Scala.</p>
+					</div>
+				</div>
+				<div class="content-component">
+					<div class="content-component content-component-even">
+						<img class="content-component-image" src="images/tessellate.png">
+						<h3 class="content-component-title">Tessellate</h3>
+						<a class="content-component-link" target="_blank" href="https://github.com/zalando-incubator/tessellate">
+							<!-- on mobile, it is more hacker-friendly to show the actual url -->
+							<span class="link-break">https://github.com</span><span class="link-break">/zalando-incubator</span><span class="link-break">/tessellate</span>
+						</a>
+						<p class="content-component-text">
+							Tessellate is a server-side React renderer that creates static HTML and a complementary component tree from abstract JSON definitions. It comprises several micro services built on top of the Mosaic architecture.
+					</div>
+				</div>
+			</div>
+			<div class="content-references">
+				<h2 class="content-diagram-title">Architecture Overview</h2>
+						<img class="content-diagram-image" src="images/diagram.png">
+			</div>
+			<div class="content-references">
+				<h2 class="content-references-title">References</h2>
+
+				<div class="content-reference">
+				  <h3 class="content-reference-title">The Recipe For Scalable Frontends (Zalando)</h3>
+				  <a class="content-reference-link" href="https://youtu.be/m32EdvitXy4">
+					    https://youtu.be/m32EdvitXy4
+					</a>
+					<p>Conference talk by Maximilian Fellner and Dan Persa</p>
+					<p class="content-reference-text">code.talks 2017</p>
+				</div>
+				<div class="content-reference">
+				  <h3 class="content-reference-title">Talking Tech Podcast about Mosaic [GER]</h3>
+				  <a class="content-reference-link" href="https://talking-tech.io/episode-12/">
+					    https://talking-tech.io/episode-12/
+					</a>
+					<p>Interview about microservices in the frontend and how to get there with mosaic (in german language).</p>
+					<p class="content-reference-text">Talking Tech Podcast</p>
+				</div>
+        <div class="content-reference">
+					<h3 class="content-reference-title">The frontend taboo: a story of full stack microservices</h3>
+					<a class="content-reference-link" href="https://www.youtube.com/watch?v=E0s3EGCefB0">
+						https://www.youtube.com/watch?v=E0s3EGCefB0
+					</a>
+					<p>Video talk by <a class="reference-author-link" target="_blank" href="https://twitter.com/mo_gr">Moritz Grauel</a> in September 2016</p>
+					<p class="content-reference-text">Voxxed Days Belgrade</p>
+					<p class="content-reference-text"></p>
+					<p class="content-reference-text">...and...</p>
+					<p class="content-reference-text"></p>
+					<a class="content-reference-link" href="https://gotocon.com/berlin-2016/presentations/show_talk.jsp?oid=8019">
+						https://gotocon.com/berlin-2016/presentations/show_talk.jsp?oid=8019
+					</a>
+					<p>Talk by <a class="reference-author-link" target="_blank" href="https://twitter.com/voidmaze">Luis Mineiro</a> and <a class="reference-author-link" target="_blank" href="https://twitter.com/mo_gr">Moritz Grauel</a> in November 2016</p>
+					<p class="content-reference-text">GOTO Berlin</p>
+				</div>
+				<div class="content-reference">
+					<h3 class="content-reference-title">Open Source And The Mosaic Project</h3>
+					<a class="content-reference-link" href="https://www.youtube.com/watch?v=pSlxIh6BHN4">
+						https://www.youtube.com/watch?v=pSlxIh6BHN4
+					</a>
+					<p>Video talk by <a class="reference-author-link" target="_blank" href="https://twitter.com/LauritaApplez">Lauri Apple</a> and <a class="reference-author-link" target="_blank" href="https://twitter.com/danpersa">Dan Persa</a> in July 2016</p>
+					<p class="content-reference-text">Virtual Microservices Summit</p>
+				</div>
+				<div class="content-reference">
+ 					<h3 class="content-reference-title">The frontend taboo - a story of full stack microservices</h3>
+ 					<a class="content-reference-link" href="http://www.slideshare.net/lmineiro/the-frontend-taboo-a-story-of-full-stack-microservices">
+ 						http://www.slideshare.net/lmineiro/the-frontend-taboo-a-story-of-full-stack-microservices
+ 					</a>
+ 					<p>Presentation slides by <a class="reference-author-link" target="_blank" href="https://twitter.com/voidmaze">Luis Mineiro</a> in June 2016</p>
+ 					<p class="content-reference-text">JBCNCONF</p>
+ 				</div>
+				<div class="content-reference">
+					<h3 class="content-reference-title">Better streaming layouts for front-end microservices with Tailor</h3>
+					<a class="content-reference-link" href="https://www.oreilly.com/ideas/better-streaming-layouts-for-frontend-microservices-with-tailor">
+						https://www.oreilly.com/ideas/better-streaming-layouts-for-frontend-microservices-with-tailor
+					</a>
+					<p>Blogpost by <a class="reference-author-link" target="_blank" href="https://twitter.com/unsoundscapes">Andrey Kuzmin</a> and <a class="reference-author-link" target="_blank" href="https://twitter.com/_vigneshh">Vignesh Shanmugam</a> in May 2016</p>
+					<p class="content-reference-text">O'Reilly</p>
+				</div>
+				<div class="content-reference">
+					<h3 class="content-reference-title">Frontend in the Microservices World</h3>
+					<a class="content-reference-link" href="https://speakerdeck.com/d_kubyshkin/frontend-microservices">
+						https://speakerdeck.com/d_kubyshkin/frontend-microservices
+					</a>
+					<p>Presentation slides by <a class="reference-author-link" target="_blank" href="https://twitter.com/d_kubyshkin">Dmitriy Kubyshkin</a> in March 2016</p>
+					<p class="content-reference-text">Zalando Frontend Meetup</p>
+				</div>
+				<div class="content-reference">
+					<h3 class="content-reference-title">Building a Reactive RESTful API with Akka HTTP and Slick</h3>
+					<a class="content-reference-link" href="https://www.youtube.com/watch?v=g-s46Ewh-zo">
+						https://www.youtube.com/watch?v=g-s46Ewh-zo
+					</a>
+					<p>Video talk by <a class="reference-author-link" target="_blank" href="https://twitter.com/danpersa">Dan Persa</a> in February 2016</p>
+					<p class="content-reference-text">Microservices Meetup Munich</p>
+				</div>
+				<div class="content-reference">
+					<h3 class="content-reference-title">From Monolith to Microservices</h3>
+					<a class="content-reference-link" href="https://www.youtube.com/watch?v=I9zpROdDf48">
+						https://www.youtube.com/watch?v=I9zpROdDf48
+					</a>
+					<p>Video talk by <a class="reference-author-link" target="_blank" href="https://twitter.com/rod_schaefer">Rodrigue Schaefer</a> in February 2016</p>
+					<p class="content-reference-text">microXchg 2016</p>
+				</div>
+				<div class="content-reference">
+					<h3 class="content-reference-title">Building Our Own Open-Source HTTP Routing Solution</h3>
+					<a class="content-reference-link" href="https://tech.zalando.de/blog/building-our-own-open-source-http-routing-solution">
+						https://tech.zalando.de/blog/building-our-own-open-source-http-routing-solution
+					</a>
+					<p>Blogpost by <a class="reference-author-link" target="_blank" href="https://twitter.com/arpad_ryszka">Arpad Ryszka</a> in December 2015</p>
+					<p class="content-reference-text">Zalando Tech Blog, HTTP Traffic Shaping</p>
+				</div>
+				<div class="content-reference">
+					<h3 class="content-reference-title">From Jimmy to Microservices: Rebuilding Zalando’s Fashion Store</h3>
+					<a class="content-reference-link" href="https://tech.zalando.de/blog/from-jimmy-to-microservices-rebuilding-zalandos-fashion-store">
+						https://tech.zalando.de/blog/from-jimmy-to-microservices-rebuilding-zalandos-fashion-store
+					</a>
+					<p>Blogpost by <a class="reference-author-link" target="_blank" href="https://twitter.com/danpersa">Dan Persa</a> in October 2015</p>
+					<p class="content-reference-text">Zalando Tech Blog</p>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="footer-link-group">
+				<a href="https://tech.zalando.de/" class="footer-link footer-link_zalando" rel="alternate" type="application/rss+xml">Zalando Tech</a>
+				<a target="_blank" href="https://twitter.com/ProjectMosaic" class="footer-link footer-link-twitter">twitter</a>
+				<a target="_blank" href="https://github.com/zalando" class="footer-link footer-link-github">github</a>
+				<a target="_blank" href="mailto:team-pathfinder@zalando.de" class="footer-link footer-link-email">contact</a>
+			</div>
+			<div class="footer-copyright">© 2016 Project Mosaic</div>
+		</footer>
+	</body>
+</html>
